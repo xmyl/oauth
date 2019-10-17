@@ -16,7 +16,7 @@ php composer.phar require --prefer-dist xmyl/oauth:dev-master
 or add
 
 ```
-"xmyl/oauth": "*"
+"xmyl/oauth": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
