@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": ">=5.5",
-        "yiisoft/yii2-httpclient": "*",
+        "yiisoft/yii2-httpclient": "*"
     },
     "autoload": {
         "psr-4": {
