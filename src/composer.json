@@ -1,0 +1,22 @@
+{
+    "name": "xmyl/oauth",
+    "description": "This is a oauth2 login.",
+    "type": "library",
+    "keywords": ["yii2","extension","OAuth2"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "xmyl",
+            "email": "xmylme@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "yiisoft/yii2-httpclient": "*",
+    },
+    "autoload": {
+        "psr-4": {
+            "xmyl\\oauth\\": "src/"
+        }
+    }
+}
