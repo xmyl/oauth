@@ -25,16 +25,16 @@ abstract class BaseOAuth2
 
     /**
      * construct方法
-     * @param string $appid 应用的唯一标识
-     * @param string $appSecret appid对应的密钥
-     * @param string $callbackUrl 登录回调地址
+     * @param string $clientId     应用的唯一标识
+     * @param string $clientSecret 对应的密钥
+     * @param string $callbackUrl  登录回调地址
      */
     public function __construct($clientId = null, $clientSecret = null, $callbackUrl = null)
     {
         $this->clientId = $clientId;
         $this->clientSecret = $clientSecret;
         $this->callbackUrl = $callbackUrl;
-        $this->httpClient = new Client();
+        $this->httpClient = new Client(); // 可以用其它http组件实现
     }
 
     /**
@@ -50,11 +50,15 @@ abstract class BaseOAuth2
     abstract public function getAccessToken($code, $state = null);
 
     /**
-     * getUserByApi
+     * 获取用户个人信息
      * @return
      */
     abstract public function getUserByApi();
 
+    /**
+     * 获取应用配置参数
+     * @return array
+     */
     public function getParams()
     {
         $params = [];

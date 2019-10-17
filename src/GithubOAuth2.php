@@ -28,8 +28,8 @@ class GithubOAuth2 extends BaseOAuth2
 
     /**
      * {@inheritdoc}
-     * @param  string $code  [description]
-     * @param  string $state [description]
+     * @param  string $code  回调地址参数code
+     * @param  string $state getAuthorizeUrl中的state
      * @return string
      */
     public function getAccessToken($code, $state = null)
